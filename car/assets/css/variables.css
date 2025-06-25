@@ -1,0 +1,45 @@
+/* importations */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
+/* GLobal Rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Variables */
+:root {
+  /* colors */
+  --bg-dark-1: #0c0c0c;
+  --bg-dark-2: #222831;
+  --bg-dark-3: #262626;
+  --bg-dark-4: #6b6b6b;
+  --bg-light-1: #f1f1f1;
+  --bg-light-2: #d9d9d9;
+  --bg-light-3: #8c8c8c;
+  --bg-accent-1: #d91a1a;
+  --bg-accent-2: #bf2121;
+  --bg-accent-4: #a62d2d;
+  --bg-accent-3: #f2a2a2;
+  /* font size */
+  --text-1: 0.73rem;
+  --text-2: 0.83rem;
+  --text-3: 0.87rem;
+  --text-4: 1rem;
+  --text-5: 1.11rem;
+  --text-6: 1.28rem;
+  --title-1: 1.5rem;
+  --title-2: 2rem;
+  --title-3: 2.4rem;
+  --title-4: 3rem;
+  /* padding */
+  --padding-1: 1rem;
+  --padding-2: 1.28rem;
+  --padding-3: 1.59rem;
+  --padding-4: 1.833rem;
+  --padding-5: 2rem;
+  --padding-6: 2.2rem;
+  --padding-7: 2.7rem;
+  --padding-8: 3rem;
+}
