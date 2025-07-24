@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Details</title>
-    <link rel="stylesheet" href="assets/css/car_details.css">
+    <link rel="stylesheet" href="assets/css/car_details.css">+
+    <script src="assets/js/carousel.js" defer></script>
 </head>
 
 <body>
@@ -39,7 +40,7 @@
 
     </header>
     <main>
-        <section class="details-section">
+        <!-- <section class="details-section">.
             <div class="car-display">
                 <div class="car-little-img">
                     <div class="little-img"><img src="assets/cars/xuv700/Mahindra-XUV700-blue-Mahindra-XUV700-pri.png"
@@ -108,7 +109,32 @@
                 </div>
             </div>
             </div>
+        </section> -->
+
+        <section class="hero-carousel">
+            <div class="carousel" data-carousel>
+
+                <div class="carousel-button-group" >
+                    <button class="carousel-button" data-carousel-button="prev">
+                        <img src="assets/img/arrow-prev-svgrepo-com.svg" alt=""></button>
+                    <button class="carousel-button" data-carousel-button="next">
+                        <img src="assets/img/arrow-next-svgrepo-com.svg" alt=""></button>
+                </div>
+
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="assets/cars/xuv700/Web-Banner-D.jpg" alt="">
+                    </li>
+                    <li class="slide">
+                        <img src="assets/cars/xuv700/landing-Page-D.jpg" alt="">
+                    </li>
+                    <li class="slide">
+                        <img src="assets/cars/xuv700/leather-seats-D.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
         </section>
+
         <section class="features-section">
             <h1 class="feat-title-cards">Explore the XUV 700 Lineup</h1>
             <div class="features-card-conteiner">

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
     <link rel="stylesheet" href="/car/assets/css/services.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -16,7 +18,7 @@
                     <li><a class="links " href="home.html">Home</a></li>
                     <li><a class="links" href="cars.html">Vehicles</a></li>
                     <li><a class="links active-link" href="contact.html">Contact Us</a></li>
-                
+
                 </ul>
             </div>
             <button onclick="showSidebar()" id="open-btn" class="open-mobile"><img
@@ -31,7 +33,7 @@
                     <li><a class="mobile-links" href="home.html">Home</a></li>
                     <li><a class="mobile-links" href="cars.html">Vehicles</a></li>
                     <li><a class="mobile-links" href="services.html">Services</a></li>
-        
+
                     <a class="link-mobile-b msn-link" href="#">Manufatures Website</a>
                 </ul>
             </div>
@@ -40,22 +42,40 @@
     </header>
 
     <main>
-        <section class="services-list">
-            <h2>Our Services</h2>
-            <ul>
-                <li>
-                    <h3>Consulting</h3>
-                    <p>Expert advice to help your business grow and succeed.</p>
-                </li>
-                <li>
-                    <h3>Implementation</h3>
-                    <p>Professional implementation of solutions tailored to your needs.</p>
-                </li>
-                <li>
-                    <h3>Support</h3>
-                    <p>Ongoing support to ensure smooth operation and satisfaction.</p>
-                </li>
-            </ul>
+        <section class="contact-conteiner">
+            <form action="#">
+                <div class="form-information">
+                    <h1 class="form-textti1">Get in Touch</h1>
+                    <h1 class="form-textti2">We're Here to Help You</h1>
+                    <h1 class="form-textti3">Fill in your details below and our team will reach out as soon as possible to assist <br> with your vehicle's parts or service needs.</h1>
+
+                </div>
+                <div class="form-input-cont">
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off" class="input">
+                        <label class="user-label">Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off" class="input">
+                        <label class="user-label">Surname</label>
+                    </div>
+                    <div class="input-group">
+                        <input required="" type="tel" name="text" autocomplete="off" class="input">
+                        <label class="user-label">Phone</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="text" autocomplete="off" class="input message-text">
+                        </textarea>
+                        <label class="user-label">Your Message...</label>
+                    </div>
+                    <input class="btn-submit" type="submit" value="Send us a message">
+            </form>
+        </section>
+        <section class="other-link-section">
+            <div class="bar"></div>
+            <div class="other-links"><a href="#">MANUFACTURE'S WEBSITE</a>
+                <a href="#">parts & services</a>
+            </div>
         </section>
     </main>
 
@@ -122,4 +142,5 @@
     </footer>
     <script src="assets/js/mobile-bar.js"></script>
 </body>
+
 </html>
