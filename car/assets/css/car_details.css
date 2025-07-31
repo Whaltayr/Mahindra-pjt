@@ -222,7 +222,8 @@ nav {
 main {
   display: flex;
   flex-direction: column;
-  /* gap:3rem; */
+  padding: 2rem;
+  gap: 6rem;
 }
 /*
 .details-section {
@@ -319,7 +320,7 @@ label {
   font-size: var(--text-3);
 }
 /*===============================================*/
-.hero-carousel{
+.hero-carousel {
   /* padding:1rem; */
 }
 .carousel {
@@ -328,7 +329,7 @@ label {
 
   position: relative;
 }
-.carousel  ul{
+.carousel ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -352,13 +353,13 @@ label {
   transition-delay: 0ms;
   z-index: 1;
 }
-.carousel-button-group{
- position: absolute;
+.carousel-button-group {
+  position: absolute;
   z-index: 10;
   bottom: 20px;
-  right:100px;
+  right: 100px;
 }
-.carousel-button{
+.carousel-button {
   height: 3rem;
   aspect-ratio: 1/1;
   border-radius: 3rem;
@@ -425,6 +426,43 @@ label {
 }
 .ft-cd3 {
   color: var(--bg-accent-2);
+}
+
+.highlights-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.highlights-slider {
+  max-width: 70vw;
+  border: #a62d2d 1px solid;
+  display: flex;
+  gap: 3rem;
+}
+.slider-card-highlight {
+  background-color: var(--bg-light-2);
+  border: #a62d2d 1px solid;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.slider-card-highlight img {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.8rem;
+}
+.slider-card-highlight h2 {
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(2.321rem, 8vw, 2.625rem);
+  text-transform: uppercase;
+  color: var(--bg-light-1);
+  align-self: flex-start;
+  padding: 2rem;
 }
 
 /* ========================footer */

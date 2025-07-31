@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background: #f5f5f5;
+}
+.car-card {
+  background: rgb(119, 119, 119);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+#detalhes {
+  background: #d16464;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+#detalhes section {
+  margin-bottom: 1rem;
+}
+#detalhes h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Selecione um carro</h1>
+  <!-- Cards de exemplo com atributos data- -->
+  <div class="car-card" data-car='{"nome":"XUV700","preco":"N$ 495 199","especificacoes":{"ano":"2024","lugares":"5"},"features":["Auto Booster","LED Taillamps"]}'>
+    <h3>Mahindra XUV700</h3>
+    <p>Preço: N$ 495 199</p>
+  </div>
+
+  <div class="car-card" data-car='{"nome":"Scorpio‑N","preco":"N$ 549 999","especificacoes":{"ano":"2025","lugares":"7","reboque":"2 500 kg"},"features":["ADAS","360° Camera"],"seguranca":["6 Airbags","ESP"]}'>
+    <h3>Mahindra Scorpio‑N</h3>
+    <p>Preço: N$ 549 999</p>
+  </div>
+
+  <!-- Onde vamos renderizar os detalhes -->
+  <div id="detalhes"></div>
+
+  <script>
+    // 1. Pega todos os cards
+    const cards = document.querySelectorAll('.car-card');
+    const detalhesEl = document.getElementById('detalhes');
+
+    // 2. Ao clicar, lê o JSON do atributo data-car e renderiza tudo
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const data = JSON.parse(card.dataset.car);
+
+        // Limpa conteúdo anterior
+        detalhesEl.innerHTML = '';
+
+        // Título principal
+        const title = document.createElement('h2');
+        title.textContent = data.nome;
+        detalhesEl.appendChild(title);
+
+        // Preço
+        const preco = document.createElement('p');
+        preco.textContent = `Preço: ${data.preco}`;
+        detalhesEl.appendChild(preco);
+
+        // Para cada categoria em data (exceto nome e preco)
+        for (const [categoria, valor] of Object.entries(data)) {
+          if (categoria === 'nome' || categoria === 'preco') continue;
+
+          // Cria seção
+          const section = document.createElement('section');
+          const header = document.createElement('h2');
+          header.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1);
+          section.appendChild(header);
+
+          // Objeto → lista de pares
+          if (valor && typeof valor === 'object' && !Array.isArray(valor)) {
+            const ul = document.createElement('ul');
+            for (const [key, v] of Object.entries(valor)) {
+              const li = document.createElement('li');
+              const label = key.charAt(0).toUpperCase() + key.slice(1);
+              li.textContent = `${label}: ${v}`;
+              ul.appendChild(li);
+            }
+            section.appendChild(ul);
+
+          // Array → lista direta
+          } else if (Array.isArray(valor)) {
+            const ul = document.createElement('ul');
+            valor.forEach(item => {
+              const li = document.createElement('li');
+              li.textContent = item;
+              ul.appendChild(li);
+            });
+            section.appendChild(ul);
+          }
+
+          detalhesEl.appendChild(section);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
