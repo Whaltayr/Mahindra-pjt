@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.slider-conteiner {
+  padding: 5rem;
+}
+.slider {
+  display: flex;
+  gap: 1rem;
+  width: 75rem; 
+  border: 1px solid red;
+  overflow-x: scroll;
+  overflow: hidden;
+}
+.slide img {
+  width: 25rem;
+  border-radius: 5px;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition: scale 0.2s ease-in-out, border 2s ease-in-out;
+}
+

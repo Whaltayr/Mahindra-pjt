@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "XUV 700",
+    "price": "N$ 495 199",
+    "image": "assets/cars/xuv700/Mahindra-XUV700-blue-Mahindra-XUV700-pri.png",
+    "description": "An all-electric luxury sedan with incredible acceleration and range.",
+    "keyHighlights": "An all-electric luxury sedan with incredible acceleration and range."
+  },
+  {
+    "id": 2,
+    "name": "BMW M4",
+    "price": "$74,900",
+    "image": "images/car2.png",
+    "description": "A high-performance coupe with sporty design and premium interior."
+  },
+  {
+    "id": 3,
+    "name": "Audi R8",
+    "price": "$142,700",
+    "image": "images/car3.png",
+    "description": "A supercar with a naturally aspirated V10 engine and breathtaking performance."
+  }
+]

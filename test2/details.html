@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <a href="index.html" class="text-blue-500 underline">← Back</a>
+  <div id="car-details" class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-6"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const carId = parseInt(params.get("id"));
+
+      fetch("cars.json")
+        .then(response => {
+          if (!response.ok) throw new Error("Erro ao carregar JSON");
+          return response.json();
+        })
+        .then(cars => {
+          const car = cars.find(c => c.id === carId);
+          if (!car) {
+            document.getElementById("car-details").innerHTML = "<p class='p-4'>Car not found.</p>";
+            return;
+          }
+
+          document.getElementById("car-details").innerHTML = `
+            <img src="${car.image}" alt="${car.name}" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h1 class="text-3xl font-bold">${car.name}</h1>
+              <p class="text-gray-700 mt-2">${car.price}</p>
+              <p class="mt-4 text-gray-600">${car.description}</p>
+            </div>
+          `;
+        })
+        .catch(error => console.error(error));
+    });
+  </script>
+</body>
+</html>

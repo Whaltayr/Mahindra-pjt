@@ -435,21 +435,43 @@ label {
   justify-content: center;
 }
 .highlights-slider {
-  max-width: 70vw;
-  border: #a62d2d 1px solid;
+  position: relative;
+  width: 80rem;
+  border: #a62d2d 5px solid;
   display: flex;
-  gap: 3rem;
+  justify-content: center;
+  gap: 1rem;
+}
+/*?button of the slider here*/
+.highlights-btn {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--bg-light-3);
+  & img {
+    height: 100%;
+  }
+}
+.high-button-slidenext{
+  right: 10px;
+}
+.slider-card-highlight:not(:nth-child(2)) {
+  scale: 0.8;
 }
 .slider-card-highlight {
   background-color: var(--bg-light-2);
-  border: #a62d2d 1px solid;
-  width: 20rem;
-  padding: 1rem;
+  width: 25rem;
+  padding: 0.5rem;
   border-radius: 5px;
 }
 .slider-card-highlight img {
   border-radius: 5px;
   width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
   height: auto;
   margin-bottom: 0.8rem;
 }
@@ -463,6 +485,18 @@ label {
   color: var(--bg-light-1);
   align-self: flex-start;
   padding: 2rem;
+}
+.text-card-highlight {
+  padding: 1rem;
+}
+.overview h3 {
+  font-size: clamp(1.725rem, 5vw, 2.12rem);
+  color: var(--bg-light-1);
+}
+.overview p {
+  font-size: clamp(1rem, 5vw, 1.302rem);
+
+  color: var(--bg-light-1);
 }
 
 /* ========================footer */
